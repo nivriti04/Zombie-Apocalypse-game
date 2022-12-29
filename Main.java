@@ -98,48 +98,48 @@ public class Main extends Application {
 			stage = primaryStage;
 			
 //			//if the user presses the close button	
-//			stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-//				public void handle(WindowEvent e) 
-//				{
-//					// create an alert asking for confirmation if they really want to exit
-//					Alert closealert = new Alert(AlertType.CONFIRMATION);
-//					closealert.setContentText("Are you sure you want to exit?");
-//					closealert.setTitle("Exit");
-//					closealert.setHeaderText(null);
-//					closealert.getButtonTypes().clear();
-//					closealert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
-//					
-//					Optional<ButtonType> result = closealert.showAndWait();
-//				
-//					// if they choose yes
-//					if (result.get() == ButtonType.YES)
-//					{
-//						//alert thanking them for using the book store
-//						Alert exitconfirm = new Alert(AlertType.INFORMATION);
-//						exitconfirm.setContentText("Thank you for playing!");
-//						exitconfirm.setTitle("Thank You");
-//						exitconfirm.setHeaderText(null);
-//						
-//						//display the thank you alert
-//						Optional<ButtonType> exitresult = exitconfirm.showAndWait();
-//						
-//						//if they choose ok on that alert
-//						if (exitresult.get()==ButtonType.OK)
-//						{
-//							//exit the program
-//							System.exit(0);
-//							Platform.exit();
-//						}
-//					}
-//					
-//					// if they choose no, take them back to the original screen
-//					else
-//					{
-//						e.consume();
-//					}
-//				}
-//					
-//			});
+			stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+				public void handle(WindowEvent e) 
+				{
+					// create an alert asking for confirmation if they really want to exit
+					Alert closealert = new Alert(AlertType.CONFIRMATION);
+					closealert.setContentText("Are you sure you want to exit?");
+					closealert.setTitle("Exit");
+					closealert.setHeaderText(null);
+					closealert.getButtonTypes().clear();
+					closealert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+					
+					Optional<ButtonType> result = closealert.showAndWait();
+				
+					// if they choose yes
+					if (result.get() == ButtonType.YES)
+					{
+						//alert thanking them for using the book store
+						Alert exitconfirm = new Alert(AlertType.INFORMATION);
+						exitconfirm.setContentText("Thank you for playing!");
+						exitconfirm.setTitle("Thank You");
+						exitconfirm.setHeaderText(null);
+						
+						//display the thank you alert
+						Optional<ButtonType> exitresult = exitconfirm.showAndWait();
+						
+						//if they choose ok on that alert
+						if (exitresult.get()==ButtonType.OK)
+						{
+							//exit the program
+							System.exit(0);
+							Platform.exit();
+						}
+					}
+					
+					// if they choose no, take them back to the original screen
+					else
+					{
+						e.consume();
+					}
+				}
+					
+			});
 			
 			//declaring the layouts
 			root = new Pane();
